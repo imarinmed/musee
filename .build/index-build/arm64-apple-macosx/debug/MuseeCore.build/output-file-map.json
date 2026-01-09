@@ -1,0 +1,33 @@
+{
+  "": {
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/master.swiftdeps"
+  },
+  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeCore/MuseeCore.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/MuseeCore.d",
+    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/MuseeCore.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/MuseeCore~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/MuseeCore.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/MuseeCore.dia"
+  },
+  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeCore/MuseeError.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/MuseeError.d",
+    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/MuseeError.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/MuseeError~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/MuseeError.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/MuseeError.dia"
+  },
+  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeCore/PartialDate.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PartialDate.d",
+    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PartialDate.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PartialDate~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PartialDate.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PartialDate.dia"
+  },
+  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeCore/StableID.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/StableID.d",
+    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/StableID.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/StableID~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/StableID.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/StableID.dia"
+  }
+}

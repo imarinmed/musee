@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseePackageTests.build/master.swiftdeps"
+  },
+  "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseePackageTests.derived/runner.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseePackageTests.build/runner.d",
+    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseePackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseePackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseePackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseePackageTests.build/runner.dia"
+  }
+}

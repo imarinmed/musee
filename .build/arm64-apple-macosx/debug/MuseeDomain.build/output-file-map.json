@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeDomain.build/master.swiftdeps"
+  },
+  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeDomain/DomainModels.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeDomain.build/DomainModels.d",
+    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeDomain.build/DomainModels.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeDomain.build/DomainModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeDomain.build/DomainModels.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeDomain.build/DomainModels.dia"
+  }
+}

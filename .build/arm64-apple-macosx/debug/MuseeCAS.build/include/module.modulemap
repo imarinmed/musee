@@ -1,0 +1,3 @@
+module MuseeCAS {
+    header "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeCAS.build/include/MuseeCAS-Swift.h"
+}

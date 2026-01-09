@@ -1,0 +1,17 @@
+disabled_rules:
+  - trailing_whitespace
+  - line_length
+
+opt_in_rules:
+  - empty_count
+  - empty_string
+
+identifier_name:
+  min_length: 1
+
+large_tuple:
+  warning: 4
+
+included:
+  - Sources
+  - Tests

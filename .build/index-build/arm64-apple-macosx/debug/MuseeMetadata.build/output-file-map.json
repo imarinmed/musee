@@ -1,0 +1,33 @@
+{
+  "": {
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/master.swiftdeps"
+  },
+  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeMetadata/C2PAReader.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/C2PAReader.d",
+    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/C2PAReader.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/C2PAReader~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/C2PAReader.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/C2PAReader.dia"
+  },
+  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeMetadata/ExtractedMetadata.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/ExtractedMetadata.d",
+    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/ExtractedMetadata.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/ExtractedMetadata~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/ExtractedMetadata.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/ExtractedMetadata.dia"
+  },
+  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeMetadata/MetadataExtractor.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/MetadataExtractor.d",
+    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/MetadataExtractor.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/MetadataExtractor~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/MetadataExtractor.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/MetadataExtractor.dia"
+  },
+  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeMetadata/XMPSidecar.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/XMPSidecar.d",
+    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/XMPSidecar.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/XMPSidecar~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/XMPSidecar.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/index-build/arm64-apple-macosx/debug/MuseeMetadata.build/XMPSidecar.dia"
+  }
+}

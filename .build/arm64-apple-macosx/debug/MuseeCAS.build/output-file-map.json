@@ -1,0 +1,19 @@
+{
+  "": {
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeCAS.build/master.swiftdeps"
+  },
+  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeCAS/ContentAddressedStore.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeCAS.build/ContentAddressedStore.d",
+    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeCAS.build/ContentAddressedStore.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeCAS.build/ContentAddressedStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeCAS.build/ContentAddressedStore.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeCAS.build/ContentAddressedStore.dia"
+  },
+  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeCAS/Hasher.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeCAS.build/Hasher.d",
+    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeCAS.build/Hasher.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeCAS.build/Hasher~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeCAS.build/Hasher.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeCAS.build/Hasher.dia"
+  }
+}
