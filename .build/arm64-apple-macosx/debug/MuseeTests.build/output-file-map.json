@@ -1,12 +1,12 @@
 {
   "": {
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeTests.build/master.swiftdeps"
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeTests.build/master.swiftdeps"
   },
-  "/Users/wolfy/Developer/2026.Y/musee/Tests/MuseeTests/MuseeTests.swift": {
-    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeTests.build/MuseeTests.d",
-    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeTests.build/MuseeTests.swift.o",
-    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeTests.build/MuseeTests~partial.swiftmodule",
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeTests.build/MuseeTests.swiftdeps",
-    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeTests.build/MuseeTests.dia"
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Tests/MuseeTests/MuseeTests.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeTests.build/MuseeTests.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeTests.build/MuseeTests.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeTests.build/MuseeTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeTests.build/MuseeTests.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeTests.build/MuseeTests.dia"
   }
 }

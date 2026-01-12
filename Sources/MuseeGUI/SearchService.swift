@@ -72,6 +72,4 @@ public class SearchService {
             return .failure(.searchFailed("Failed to sort assets: \(error.localizedDescription)"))
         }
     }
-
-
 }

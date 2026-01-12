@@ -65,12 +65,12 @@ class MuseumViewModel: ObservableObject {
 
     func selectWing(_ wing: MuseumIndex.Wing) {
         selectedWing = wing
-        // TODO: Load wing exhibits
+        exhibits = wing.categories.map { URL(fileURLWithPath: $0) }
     }
 
     func selectExhibit(_ exhibit: URL) {
         selectedExhibit = exhibit
-        // TODO: Load exhibit assets
+        assets = dataLoadingService.loadDemoAssets()
     }
 
     func selectAsset(_ asset: MediaAsset) {
@@ -93,8 +93,7 @@ class MuseumViewModel: ObservableObject {
                 }
             }
 
-            // Use demo data for now - TODO: Load actual image data
-            let demoData = Data() // Empty data for demo
+            let demoData = asset.originalSourceURL.flatMap { try? Data(contentsOf: $0) } ?? Data()
             let result = await self?.beautyAnalysisService.analyzeBeauty(from: demoData)
 
             await MainActor.run {

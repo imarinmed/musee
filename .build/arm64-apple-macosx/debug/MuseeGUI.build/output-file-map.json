@@ -1,75 +1,75 @@
 {
   "": {
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/master.swiftdeps"
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/master.swiftdeps"
   },
-  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeGUI/AssetViewer.swift": {
-    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/AssetViewer.d",
-    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/AssetViewer.swift.o",
-    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/AssetViewer~partial.swiftmodule",
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/AssetViewer.swiftdeps",
-    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/AssetViewer.dia"
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeGUI/AssetViewer.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/AssetViewer.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/AssetViewer.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/AssetViewer~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/AssetViewer.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/AssetViewer.dia"
   },
-  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeGUI/BeautyAnalysisDashboard.swift": {
-    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisDashboard.d",
-    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisDashboard.swift.o",
-    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisDashboard~partial.swiftmodule",
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisDashboard.swiftdeps",
-    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisDashboard.dia"
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeGUI/BeautyAnalysisDashboard.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisDashboard.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisDashboard.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisDashboard~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisDashboard.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisDashboard.dia"
   },
-  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeGUI/BeautyAnalysisService.swift": {
-    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisService.d",
-    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisService.swift.o",
-    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisService~partial.swiftmodule",
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisService.swiftdeps",
-    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisService.dia"
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeGUI/BeautyAnalysisService.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisService.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisService.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisService~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisService.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/BeautyAnalysisService.dia"
   },
-  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeGUI/DataLoadingService.swift": {
-    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/DataLoadingService.d",
-    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/DataLoadingService.swift.o",
-    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/DataLoadingService~partial.swiftmodule",
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/DataLoadingService.swiftdeps",
-    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/DataLoadingService.dia"
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeGUI/DataLoadingService.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/DataLoadingService.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/DataLoadingService.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/DataLoadingService~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/DataLoadingService.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/DataLoadingService.dia"
   },
-  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeGUI/MuseeApp.swift": {
-    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseeApp.d",
-    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseeApp.swift.o",
-    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseeApp~partial.swiftmodule",
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseeApp.swiftdeps",
-    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseeApp.dia"
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeGUI/MuseeApp.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseeApp.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseeApp.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseeApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseeApp.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseeApp.dia"
   },
-  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeGUI/MuseumBrowserView.swift": {
-    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumBrowserView.d",
-    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumBrowserView.swift.o",
-    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumBrowserView~partial.swiftmodule",
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumBrowserView.swiftdeps",
-    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumBrowserView.dia"
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeGUI/MuseumBrowserView.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumBrowserView.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumBrowserView.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumBrowserView~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumBrowserView.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumBrowserView.dia"
   },
-  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeGUI/MuseumViewModel.swift": {
-    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumViewModel.d",
-    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumViewModel.swift.o",
-    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumViewModel~partial.swiftmodule",
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumViewModel.swiftdeps",
-    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumViewModel.dia"
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeGUI/MuseumViewModel.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumViewModel.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumViewModel.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumViewModel.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/MuseumViewModel.dia"
   },
-  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeGUI/ProcessingDashboardView.swift": {
-    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/ProcessingDashboardView.d",
-    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/ProcessingDashboardView.swift.o",
-    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/ProcessingDashboardView~partial.swiftmodule",
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/ProcessingDashboardView.swiftdeps",
-    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/ProcessingDashboardView.dia"
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeGUI/ProcessingDashboardView.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/ProcessingDashboardView.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/ProcessingDashboardView.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/ProcessingDashboardView~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/ProcessingDashboardView.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/ProcessingDashboardView.dia"
   },
-  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeGUI/SearchService.swift": {
-    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchService.d",
-    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchService.swift.o",
-    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchService~partial.swiftmodule",
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchService.swiftdeps",
-    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchService.dia"
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeGUI/SearchService.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchService.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchService.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchService~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchService.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchService.dia"
   },
-  "/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeGUI/SearchView.swift": {
-    "dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchView.d",
-    "object": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchView.swift.o",
-    "swiftmodule": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchView~partial.swiftmodule",
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchView.swiftdeps",
-    "diagnostics": "/Users/wolfy/Developer/2026.Y/musee/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchView.dia"
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeGUI/SearchView.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchView.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchView.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchView~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchView.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeGUI.build/SearchView.dia"
   }
 }

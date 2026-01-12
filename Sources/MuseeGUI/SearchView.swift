@@ -9,7 +9,7 @@ struct SearchView: View {
     @State private var searchQuery = ""
     @State private var selectedSortBy: SortOptions.SortBy = .capturedAt
     @State private var selectedSortOrder: SortOptions.SortOrder = .descending
-    @State private var selectedMediaType: MediaKind? = nil
+    @State private var selectedMediaType: MediaKind?
     @State private var beautyScoreRange: ClosedRange<Double> = 0...100
     @State private var symmetryScoreRange: ClosedRange<Double> = 0...100
 
@@ -28,10 +28,10 @@ struct SearchView: View {
                         }
 
                     if !searchQuery.isEmpty {
-                        Button(action: { searchQuery = "" }) {
+                        Button(action: { searchQuery = "" }, label: {
                             Image(systemName: "xmark.circle.fill")
                                 .foregroundColor(.secondary)
-                        }
+                        })
                     }
 
                     Button("Search", action: performSearch)
@@ -105,17 +105,17 @@ struct SearchView: View {
 
     private var mediaTypePicker: some View {
         Menu {
-            Button(action: { selectedMediaType = nil }) {
+            Button(action: { selectedMediaType = nil }, label: {
                 Label("All Types", systemImage: selectedMediaType == nil ? "checkmark" : "")
-            }
+            })
 
-            Button(action: { selectedMediaType = .image }) {
+            Button(action: { selectedMediaType = .image }, label: {
                 Label("Images", systemImage: selectedMediaType == .image ? "checkmark" : "")
-            }
+            })
 
-            Button(action: { selectedMediaType = .video }) {
+            Button(action: { selectedMediaType = .video }, label: {
                 Label("Videos", systemImage: selectedMediaType == .video ? "checkmark" : "")
-            }
+            })
         } label: {
             let title = selectedMediaType?.rawValue.capitalized ?? "All Types"
             return filterButton(

@@ -1,4 +1,7 @@
-/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeCore/MuseeCore.swift
-/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeCore/MuseeError.swift
-/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeCore/PartialDate.swift
-/Users/wolfy/Developer/2026.Y/musee/Sources/MuseeCore/StableID.swift
+'/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/MuseeCore.swift'
+'/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/MuseeError.swift'
+'/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PartialDate.swift'
+'/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformImage.swift'
+'/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformImagePicker.swift'
+'/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformVisualEffect.swift'
+'/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/StableID.swift'

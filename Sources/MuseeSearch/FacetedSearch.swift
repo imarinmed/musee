@@ -65,8 +65,6 @@ public struct CurationRule: Codable, Sendable {
     }
 }
 
-
-
 /// Represents a search query with faceted filters.
 public struct FacetedSearchQuery: Sendable {
     public var text: String?
@@ -186,7 +184,7 @@ public actor InMemorySearchEngine: SearchEngine {
             }
 
             // EROSS range (placeholder)
-            if let _ = query.erossRange {
+            if query.erossRange != nil {
                 // Would need EROSS claims integration
                 continue
             }
@@ -380,4 +378,3 @@ public actor InMemorySearchEngine: SearchEngine {
         }
     }
 }
-

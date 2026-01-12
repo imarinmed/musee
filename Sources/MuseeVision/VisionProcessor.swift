@@ -77,8 +77,6 @@ public struct VisionProcessor {
         } ?? []
     }
 
-
-
     /// Analyze beauty features from vision data.
     public static func analyzeBeauty(from features: VisionFeatures) -> BeautyFeatures {
         let facialRatios = analyzeFacialRatios(from: features.faces)
@@ -145,7 +143,6 @@ public struct VisionProcessor {
         let lowerLip = abs((landmarks["lowerLip"]?.y ?? 0) - (landmarks["mouth"]?.y ?? 0))
 
         // Calculate ratios
-        let phi: Double = 1.618
         let eyeToNoseRatio = eyeToNose > 0 ? noseToMouth / eyeToNose : 0
         let noseToMouthRatio = eyeToNose > 0 ? noseToMouth / eyeToNose : 0  // Simplified
         let faceWidthRatio = faceLength > 0 ? faceWidth / faceLength : 0
@@ -233,7 +230,7 @@ public struct VisionProcessor {
     }
 
     private static func analyzeBodyRatios(from poses: [PoseFeatures]) -> BodyRatios {
-        guard let pose = poses.first else {
+        guard !poses.isEmpty else {
             return BodyRatios(waistToHipRatio: nil, shoulderToWaistRatio: nil, overallScore: 0)
         }
 
@@ -275,7 +272,7 @@ public struct VisionProcessor {
     }
 
     private static func analyzeEyes(from faces: [FaceFeatures]) -> EyeAnalysis {
-        guard let face = faces.first else {
+        guard !faces.isEmpty else {
             return EyeAnalysis(shape: .almond, symmetry: 0, irisVisibility: 0, eyelidPosition: 0, eyebrowArch: 0, overallAppeal: 0)
         }
 
@@ -298,7 +295,7 @@ public struct VisionProcessor {
     }
 
     private static func analyzeNose(from faces: [FaceFeatures]) -> NoseAnalysis {
-        guard let face = faces.first else {
+        guard !faces.isEmpty else {
             return NoseAnalysis(bridgeWidth: 0, nostrilSymmetry: 0, tipDefinition: 0, overallProportion: 0, appeal: 0)
         }
 
@@ -319,7 +316,7 @@ public struct VisionProcessor {
     }
 
     private static func analyzeMouth(from faces: [FaceFeatures]) -> MouthAnalysis {
-        guard let face = faces.first else {
+        guard !faces.isEmpty else {
             return MouthAnalysis(lipFullness: 0, smileArc: 0, teethAlignment: 0, cupidsBow: 0, symmetry: 0, appeal: 0)
         }
 
@@ -342,7 +339,7 @@ public struct VisionProcessor {
     }
 
     private static func analyzeFacialStructure(from faces: [FaceFeatures]) -> FacialStructure {
-        guard let face = faces.first else {
+        guard !faces.isEmpty else {
             return FacialStructure(cheekboneProminence: 0, jawlineDefinition: 0, chinShape: .round, foreheadProportion: 0, overallStructure: 0)
         }
 
@@ -405,11 +402,7 @@ public struct VisionProcessor {
         if lower.contains("dress") || lower.contains("shirt") || lower.contains("pants") {
             return "clothing:\(lower.replacingOccurrences(of: " ", with: "-"))"
         } else if lower.contains("hair") {
-            if lower.contains("blond") { return "hair:blonde" }
-            else if lower.contains("brunette") || lower.contains("brown") { return "hair:brown" }
-            else if lower.contains("red") { return "hair:red" }
-            else if lower.contains("black") { return "hair:black" }
-            else { return "hair:\(lower.replacingOccurrences(of: " hair", with: ""))" }
+            if lower.contains("blond") { return "hair:blonde" } else if lower.contains("brunette") || lower.contains("brown") { return "hair:brown" } else if lower.contains("red") { return "hair:red" } else if lower.contains("black") { return "hair:black" } else { return "hair:\(lower.replacingOccurrences(of: " hair", with: ""))" }
         } else if lower.contains("accessory") || lower.contains("hat") || lower.contains("glasses") {
             return "accessory:\(lower.replacingOccurrences(of: " ", with: "-"))"
         }
@@ -445,10 +438,8 @@ public struct VisionProcessor {
         let average = sum / 64
 
         var hash: UInt64 = 0
-        for (index, pixel) in pixels.enumerated() {
-            if pixel >= average {
-                hash |= (1 << index)
-            }
+        for (index, pixel) in pixels.enumerated() where pixel >= average {
+            hash |= (1 << index)
         }
 
         return hash

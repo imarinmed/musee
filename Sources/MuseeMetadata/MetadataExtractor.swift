@@ -37,7 +37,7 @@ public struct VideoMetadataExtractor: MetadataExtractor {
     public let supportedKinds: Set<MediaKind> = [.video]
 
     public func extractMetadata(from fileURL: URL) async throws -> [String: Any]? {
-        let asset = AVAsset(url: fileURL)
+        let asset = AVURLAsset(url: fileURL)
         let duration = try await asset.load(.duration)
         let tracks = try await asset.loadTracks(withMediaType: .video)
 
@@ -45,9 +45,10 @@ public struct VideoMetadataExtractor: MetadataExtractor {
         result["duration"] = duration.seconds
         result["videoTracks"] = tracks.count
 
-        for item in asset.metadata {
-            if let key = item.commonKey?.rawValue {
-                result[key] = item.value
+        let metadata = try await asset.load(.metadata)
+        for item in metadata {
+            if let key = item.commonKey?.rawValue, let value = try await item.load(.value) {
+                result[key] = value
             }
         }
 
@@ -60,7 +61,7 @@ public struct AudioMetadataExtractor: MetadataExtractor {
     public let supportedKinds: Set<MediaKind> = [.audio]
 
     public func extractMetadata(from fileURL: URL) async throws -> [String: Any]? {
-        let asset = AVAsset(url: fileURL)
+        let asset = AVURLAsset(url: fileURL)
         let duration = try await asset.load(.duration)
         let tracks = try await asset.loadTracks(withMediaType: .audio)
 
@@ -68,9 +69,10 @@ public struct AudioMetadataExtractor: MetadataExtractor {
         result["duration"] = duration.seconds
         result["audioTracks"] = tracks.count
 
-        for item in asset.metadata {
-            if let key = item.commonKey?.rawValue {
-                result[key] = item.value
+        let metadata = try await asset.load(.metadata)
+        for item in metadata {
+            if let key = item.commonKey?.rawValue, let value = try await item.load(.value) {
+                result[key] = value
             }
         }
 
@@ -86,15 +88,13 @@ public struct CompositeMetadataExtractor {
         self.extractors = [
             ImageMetadataExtractor(),
             VideoMetadataExtractor(),
-            AudioMetadataExtractor(),
+            AudioMetadataExtractor()
         ]
     }
 
     public func extractMetadata(from fileURL: URL, kind: MediaKind) async throws -> [String: Any]? {
-        for extractor in extractors {
-            if extractor.supportedKinds.contains(kind) {
-                return try await extractor.extractMetadata(from: fileURL)
-            }
+        for extractor in extractors where extractor.supportedKinds.contains(kind) {
+            return try await extractor.extractMetadata(from: fileURL)
         }
         return nil
     }

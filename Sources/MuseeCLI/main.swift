@@ -67,7 +67,7 @@ enum CLI {
             wings = [
                 MuseumIndex.Wing(id: StableID("fitness"), name: "Fitness", description: "Fitness models and athletes"),
                 MuseumIndex.Wing(id: StableID("singers"), name: "Singers", description: "Singers and performers"),
-                MuseumIndex.Wing(id: StableID("actors"), name: "Actors", description: "Actors and actresses"),
+                MuseumIndex.Wing(id: StableID("actors"), name: "Actors", description: "Actors and actresses")
             ]
         }
 
@@ -94,7 +94,7 @@ enum CLI {
         let wingID = args[1]
         let wingName = args[2]
 
-        var description: String? = nil
+        var description: String?
         var argIndex = 3
         while argIndex < args.count {
             let token = args[argIndex]

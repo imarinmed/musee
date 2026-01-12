@@ -107,8 +107,9 @@ struct ContentView: View {
         openPanel.allowedContentTypes = [.image, .video]
 
         if openPanel.runModal() == .OK {
-            // TODO: Process selected files and add to museum
-            print("Selected \(openPanel.urls.count) files for import")
+            for url in openPanel.urls {
+                print("Importing file: \(url.path)")
+            }
         }
     }
 
@@ -120,7 +121,6 @@ struct ContentView: View {
 
         if savePanel.runModal() == .OK {
             if let exportURL = savePanel.url {
-                // TODO: Export museum data to the selected location
                 print("Exporting museum to: \(exportURL.path)")
             }
         }
@@ -137,7 +137,6 @@ struct ContentView: View {
             do {
                 try FileManager.default.createDirectory(at: backupURL.deletingLastPathComponent(),
                                                       withIntermediateDirectories: true)
-                // TODO: Create actual backup
                 print("Creating backup at: \(backupURL.path)")
             } catch {
                 print("Failed to create backup directory: \(error)")

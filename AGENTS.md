@@ -98,5 +98,7 @@
 - **Linting**: swiftlint with rules matching above.
 - **Formatting**: swift-format with 4-space indent, 120 line length.
 - **CI/CD**: Run lint/format/test on every PR.
+- **Build Verification**: Must run `swift build` and ensure zero compilation errors and zero warnings before considering any task complete.
+- **Task Completion**: Always consider tasks unfinished until the code builds without errors or warnings.
 
 These rules will be enforced in all Musee code. Our commitment to code elegance ensures that every line of code is expressive, safe, and maintainable. We strive for beautiful, functional Swift that delights both developers and users.
