@@ -15,6 +15,7 @@
 //
 
 import SwiftUI
+import AppKit
 import MuseePlatform
 
 /// macOS-specific image picker using NSOpenPanel
@@ -22,19 +23,48 @@ public struct MacOSImagePicker: ImagePicker {
     public init() {}
 
     public func pickImage(completion: @escaping (Data?) -> Void) {
-        // Implementation would use NSOpenPanel
-        // For now, return nil to indicate not implemented
-        completion(nil)
+        let panel = NSOpenPanel()
+        panel.allowedFileTypes = ["png", "jpg", "jpeg", "gif", "tiff", "bmp"]
+        panel.canChooseFiles = true
+        panel.canChooseDirectories = false
+        panel.allowsMultipleSelection = false
+
+        panel.begin { response in
+            if response == .OK, let url = panel.url {
+                do {
+                    let data = try Data(contentsOf: url)
+                    completion(data)
+                } catch {
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
     }
 }
 
 /// macOS-specific file manager
-public struct MacOSFileManager: FileManager {
+public struct MacOSFileManager: MuseePlatform.PlatformFileManager {
     public init() {}
 
     public func saveFile(data: Data, filename: String, completion: @escaping (URL?) -> Void) {
-        // Implementation would use NSSavePanel
-        completion(nil)
+        let panel = NSSavePanel()
+        panel.allowedFileTypes = ["png", "jpg", "jpeg", "gif", "tiff", "bmp"]
+        panel.nameFieldStringValue = filename
+
+        panel.begin { response in
+            if response == .OK, let url = panel.url {
+                do {
+                    try data.write(to: url)
+                    completion(url)
+                } catch {
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
     }
 
     public func loadFile(url: URL, completion: @escaping (Data?) -> Void) {
@@ -44,6 +74,66 @@ public struct MacOSFileManager: FileManager {
         } catch {
             completion(nil)
         }
+    }
+}
+
+/// macOS-specific content sharer using NSSharingService
+public struct MacOSContentSharer: PlatformContentSharer {
+    public init() {}
+
+    public func share(data: Data, filename: String) {
+        // Create a temporary file
+        let tempDir = FileManager.default.temporaryDirectory
+        let tempURL = tempDir.appendingPathComponent(filename)
+
+        do {
+            try data.write(to: tempURL)
+            let sharingService = NSSharingService(named: .composeEmail)
+            sharingService?.perform(withItems: [tempURL])
+        } catch {
+            // Handle error
+        }
+    }
+}
+
+/// macOS-specific notification center
+public struct MacOSNotificationCenter: PlatformNotificationCenter {
+    public init() {}
+
+    public func schedule(title: String, body: String, at date: Date) {
+        let notification = NSUserNotification()
+        notification.title = title
+        notification.informativeText = body
+        notification.deliveryDate = date
+        NSUserNotificationCenter.default.scheduleNotification(notification)
+    }
+}
+
+/// macOS-specific haptic engine (limited support)
+public struct MacOSHapticEngine: PlatformHapticEngine {
+    public init() {}
+
+    public func success() {
+        NSSound(named: "Tink")?.play()
+    }
+
+    public func error() {
+        NSSound(named: "Basso")?.play()
+    }
+
+    public func warning() {
+        NSSound(named: "Funk")?.play()
+    }
+}
+
+/// macOS-specific camera controller
+public struct MacOSCameraController: PlatformCameraController {
+    public init() {}
+
+    public func capturePhoto(completion: @escaping (Data?) -> Void) {
+        // macOS camera access is more complex, would require AVFoundation
+        // For now, return nil
+        completion(nil)
     }
 }
 

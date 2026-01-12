@@ -141,7 +141,7 @@ let package = Package(
             name: "MuseeiOS",
             dependencies: [
                 "MuseeUI",
-                // "MuseePlatformiOS", // TODO: Add when implemented
+                "MuseePlatform",
             ]
         ),
         .executableTarget(

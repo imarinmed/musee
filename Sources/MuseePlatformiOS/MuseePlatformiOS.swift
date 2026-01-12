@@ -1,88 +1,19 @@
-import Foundation
-
-#if canImport(AppKit)
-import AppKit
-import UniformTypeIdentifiers
-#endif
-
-#if canImport(UIKit)
 import UIKit
 import PhotosUI
-#endif
+import MuseePlatform
 
-/// Protocol for image picker functionality across platforms
-public protocol ImagePicker {
-    @MainActor func pickImage(completion: @escaping (Data?) -> Void)
-}
+/// iOS-specific image picker using PHPickerViewController
+public struct iOSImagePicker: ImagePicker {
+    public init() {}
 
-/// Protocol for file operations
-public protocol PlatformFileManager {
-    func saveFile(data: Data, filename: String, completion: @escaping (URL?) -> Void)
-    func loadFile(url: URL, completion: @escaping (Data?) -> Void)
-}
-
-/// Protocol for sharing content
-public protocol PlatformContentSharer {
-    func share(data: Data, filename: String)
-}
-
-/// Protocol for notifications
-public protocol PlatformNotificationCenter {
-    func schedule(title: String, body: String, at date: Date)
-}
-
-/// Protocol for haptic feedback
-public protocol PlatformHapticEngine {
-    func success()
-    func error()
-    func warning()
-}
-
-/// Protocol for camera access
-public protocol PlatformCameraController {
-    func capturePhoto(completion: @escaping (Data?) -> Void)
-}
-
-// Private platform-specific implementations
-private struct StubImagePicker: ImagePicker {
-    func pickImage(completion: @escaping (Data?) -> Void) {
-        completion(nil)
-    }
-}
-
-#if canImport(AppKit)
-private struct MacOSImagePicker: ImagePicker {
-    @MainActor func pickImage(completion: @escaping (Data?) -> Void) {
-        let panel = NSOpenPanel()
-        panel.allowedContentTypes = [UTType.image]
-        panel.canChooseFiles = true
-        panel.canChooseDirectories = false
-        panel.allowsMultipleSelection = false
-        panel.begin { response in
-            if response == .OK, let url = panel.url {
-                do {
-                    let data = try Data(contentsOf: url)
-                    completion(data)
-                } catch {
-                    completion(nil)
-                }
-            } else {
-                completion(nil)
-            }
-        }
-    }
-}
-#endif
-
-#if canImport(UIKit)
-private struct iOSImagePicker: ImagePicker {
-    func pickImage(completion: @escaping (Data?) -> Void) {
+    public func pickImage(completion: @escaping (Data?) -> Void) {
         let configuration = PHPickerConfiguration()
         configuration.selectionLimit = 1
         configuration.filter = .images
         let picker = PHPickerViewController(configuration: configuration)
         let delegate = ImagePickerDelegate(completion: completion)
         picker.delegate = delegate
+        // Present the picker
         if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let window = scene.windows.first,
            let rootVC = window.rootViewController {
@@ -113,109 +44,13 @@ private class ImagePickerDelegate: NSObject, PHPickerViewControllerDelegate {
         }
     }
 }
-#endif
 
-/// Type-erased platform-specific implementations
-public struct PlatformImagePicker {
-    private let implementation: ImagePicker
-
-    public init() {
-        #if canImport(AppKit)
-        implementation = MacOSImagePicker()
-        #elseif canImport(UIKit)
-        implementation = iOSImagePicker()
-        #else
-        implementation = StubImagePicker()
-        #endif
-    }
-
-    public func pickImage(completion: @escaping (Data?) -> Void) {
-        implementation.pickImage(completion: completion)
-    }
-}
-
-#if canImport(AppKit)
-public struct MacOSFileManager: PlatformFileManager {
-    public init() {}
-    public func saveFile(data: Data, filename: String, completion: @escaping (URL?) -> Void) {
-        let panel = NSSavePanel()
-        panel.allowedContentTypes = [UTType.image]
-        panel.nameFieldStringValue = filename
-        panel.begin { response in
-            if response == .OK, let url = panel.url {
-                do {
-                    try data.write(to: url)
-                    completion(url)
-                } catch {
-                    completion(nil)
-                }
-            } else {
-                completion(nil)
-            }
-        }
-    }
-    public func loadFile(url: URL, completion: @escaping (Data?) -> Void) {
-        do {
-            let data = try Data(contentsOf: url)
-            completion(data)
-        } catch {
-            completion(nil)
-        }
-    }
-}
-
-public struct MacOSContentSharer: PlatformContentSharer {
-    public init() {}
-    public func share(data: Data, filename: String) {
-        let tempDir = FileManager.default.temporaryDirectory
-        let tempURL = tempDir.appendingPathComponent(filename)
-        do {
-            try data.write(to: tempURL)
-            let sharingService = NSSharingService(named: NSSharingService.Name.composeEmail)
-            sharingService?.perform(withItems: [tempURL])
-        } catch {
-            // Handle error
-        }
-    }
-}
-
-public struct MacOSNotificationCenter: PlatformNotificationCenter {
-    public init() {}
-    public func schedule(title: String, body: String, at date: Date) {
-        let notification = NSUserNotification()
-        notification.title = title
-        notification.informativeText = body
-        notification.deliveryDate = date
-        NSUserNotificationCenter.default.scheduleNotification(notification)
-    }
-}
-
-public struct MacOSHapticEngine: PlatformHapticEngine {
-    public init() {}
-    public func success() {
-        NSSound(named: "Tink")?.play()
-    }
-    public func error() {
-        NSSound(named: "Basso")?.play()
-    }
-    public func warning() {
-        NSSound(named: "Funk")?.play()
-    }
-}
-
-public struct MacOSCameraController: PlatformCameraController {
-    public init() {}
-    public func capturePhoto(completion: @escaping (Data?) -> Void) {
-        // macOS camera access requires AVFoundation, not implemented
-        completion(nil)
-    }
-}
-#endif
-
-#if canImport(UIKit)
+/// iOS-specific file manager
 public struct iOSFileManager: PlatformFileManager {
     public init() {}
     public func saveFile(data: Data, filename: String, completion: @escaping (URL?) -> Void) {
+        // For iOS, saving files typically uses share sheet or document picker
+        // For simplicity, save to documents directory
         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let fileURL = documentsURL.appendingPathComponent(filename)
         do {
@@ -235,6 +70,7 @@ public struct iOSFileManager: PlatformFileManager {
     }
 }
 
+/// iOS-specific content sharer using UIActivityViewController
 public struct iOSContentSharer: PlatformContentSharer {
     public init() {}
     public func share(data: Data, filename: String) {
@@ -253,6 +89,7 @@ public struct iOSContentSharer: PlatformContentSharer {
     }
 }
 
+/// iOS-specific notification center
 public struct iOSNotificationCenter: PlatformNotificationCenter {
     public init() {}
     public func schedule(title: String, body: String, at date: Date) {
@@ -267,6 +104,7 @@ public struct iOSNotificationCenter: PlatformNotificationCenter {
     }
 }
 
+/// iOS-specific haptic engine
 public struct iOSHapticEngine: PlatformHapticEngine {
     private let feedbackGenerator = UINotificationFeedbackGenerator()
     public init() {
@@ -283,6 +121,7 @@ public struct iOSHapticEngine: PlatformHapticEngine {
     }
 }
 
+/// iOS-specific camera controller
 public struct iOSCameraController: PlatformCameraController {
     public init() {}
     public func capturePhoto(completion: @escaping (Data?) -> Void) {
@@ -321,4 +160,3 @@ private class CameraDelegate: NSObject, UIImagePickerControllerDelegate, UINavig
         completion(nil)
     }
 }
-#endif
