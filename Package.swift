@@ -8,6 +8,7 @@ let package = Package(
         .macOS(.v26), .iOS(.v26), .tvOS(.v26), .visionOS(.v26), .watchOS(.v26),
     ],
     products: [
+        // Core modules (internal building blocks)
         .library(name: "MuseeCore", targets: ["MuseeCore"]),
         .library(name: "MuseeDomain", targets: ["MuseeDomain"]),
         .library(name: "MuseeCAS", targets: ["MuseeCAS"]),
@@ -16,8 +17,20 @@ let package = Package(
         .library(name: "MuseeMetadata", targets: ["MuseeMetadata"]),
         .library(name: "MuseeSearch", targets: ["MuseeSearch"]),
         .library(name: "MuseeVision", targets: ["MuseeVision"]),
+
+        // Public facade and UI
+        .library(name: "MuseeKit", targets: ["MuseeKit"]),
+        .library(name: "MuseeUI", targets: ["MuseeUI"]),
+
+        // Platform abstraction layer
+        .library(name: "MuseePlatform", targets: ["MuseePlatform"]),
+        .library(name: "MuseePlatformMac", targets: ["MuseePlatformMac"]),
+
+        // Executables
         .executable(name: "musee", targets: ["MuseeCLI"]),
         .executable(name: "MuseeGUI", targets: ["MuseeGUI"]),
+        .executable(name: "MuseeMac", targets: ["MuseeMac"]),
+        .executable(name: "MuseeiOS", targets: ["MuseeiOS"]),
     ],
     targets: [
         .target(
@@ -75,31 +88,90 @@ let package = Package(
                 "MuseeMetadata",
             ]
         ),
-        .executableTarget(
-            name: "MuseeGUI",
+        // New facade library
+        .target(
+            name: "MuseeKit",
             dependencies: [
                 "MuseeCore",
                 "MuseeDomain",
+                "MuseeCAS",
+                "MuseeBundle",
                 "MuseeMuseum",
+                "MuseeMetadata",
                 "MuseeSearch",
                 "MuseeVision",
+            ]
+        ),
+
+        // UI components library
+        .target(
+            name: "MuseeUI",
+            dependencies: [
+                "MuseeKit",
+            ]
+        ),
+
+        // Platform abstraction protocols
+        .target(
+            name: "MuseePlatform"
+        ),
+
+        // macOS platform implementation
+        .target(
+            name: "MuseePlatformMac",
+            dependencies: [
+                "MuseePlatform",
+            ]
+        ),
+
+        .executableTarget(
+            name: "MuseeGUI",
+            dependencies: [
+                "MuseeUI",
+            ]
+        ),
+        .executableTarget(
+            name: "MuseeMac",
+            dependencies: [
+                "MuseeUI",
+                "MuseePlatformMac",
+            ]
+        ),
+        .executableTarget(
+            name: "MuseeiOS",
+            dependencies: [
+                "MuseeUI",
+                // "MuseePlatformiOS", // TODO: Add when implemented
             ]
         ),
         .executableTarget(
             name: "MuseeCLI",
             dependencies: [
-                "MuseeMuseum",
-                "MuseeMetadata",
+                "MuseeKit", // CLI can use the full facade
             ]
         ),
         .testTarget(
             name: "MuseeTests",
             dependencies: [
-                "MuseeMuseum",
-                "MuseeMetadata",
-                "MuseeSearch",
-                "MuseeVision",
+                "MuseeKit", // Test the full facade
             ]
+        ),
+
+        // Test targets for new modules
+        .testTarget(
+            name: "MuseeUITests",
+            dependencies: [
+                "MuseeUI",
+            ],
+            path: "Tests/MuseeUITests"
+        ),
+
+        .testTarget(
+            name: "MuseePlatformMacTests",
+            dependencies: [
+                "MuseePlatformMac",
+            ],
+            path: "Tests/MuseePlatformMacTests"
         ),
     ]
 )
