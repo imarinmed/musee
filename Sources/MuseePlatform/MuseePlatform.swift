@@ -14,6 +14,8 @@
 //  ```
 //
 
+import Foundation
+
 /// Protocol for image picker functionality across platforms
 public protocol ImagePicker {
     func pickImage(completion: @escaping (Data?) -> Void)
