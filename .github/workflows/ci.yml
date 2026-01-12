@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        swift-version: [6.0, 6.2]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Swift ${{ matrix.swift-version }}
+      uses: swift-actions/setup-swift@v2
+      with:
+        swift-version: ${{ matrix.swift-version }}
+
+    - name: Cache Swift packages
+      uses: actions/cache@v4
+      with:
+        path: .build
+        key: ${{ runner.os }}-swift${{ matrix.swift-version }}-${{ hashFiles('**/Package.resolved') }}
+        restore-keys: |
+          ${{ runner.os }}-swift${{ matrix.swift-version }}-
+
+    - name: Build all products
+      run: swift build
+
+    - name: Run tests
+      run: swift test
+
+    - name: Build XCFramework
+      run: |
+        # Build for macOS
+        xcodebuild archive \
+          -scheme MuseeKit \
+          -configuration Release \
+          -destination 'platform=macOS' \
+          -archivePath build/macos.xcarchive \
+          SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+
+        # Create XCFramework
+        xcodebuild -create-xcframework \
+          -archive build/macos.xcarchive \
+          -output MuseeKit.xcframework
+
+  lint:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Run SwiftLint
+      run: |
+        if command -v swiftlint >/dev/null 2>&1; then
+          swiftlint --strict
+        else
+          echo "SwiftLint not installed, skipping lint check"
+        fi
