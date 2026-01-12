@@ -1,0 +1,45 @@
+# Xcode
+.DS_Store
+*.swp
+*.lock
+*.tmp
+*.log
+.idea/
+
+# Build artifacts
+.build/
+DerivedData/
+*.xcscmblueprint
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/project.pbxproj
+*.xcworkspace/xcuserdata/
+
+# SPM
+Package.resolved
+.build
+.swiftpm/xcode/package.xcworkspace/xcuserdata/
+.swiftpm/xcode/xcuserdata/
+
+# Swift Testing
+*.xctest
+*.xctestplan
+*.xctestplan/xcuserdata/
+
+# XCFramework
+*.xcframework
+
+# Documentation
+.docc-build/
+
+# Testing
+Coverage.profdata
+
+# CI
+.github/workflows/*.log
+
+# Musee specific
+MuseeEnvironment/
+*.musee
