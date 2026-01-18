@@ -43,5 +43,12 @@
     "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalStorageManager~partial.swiftmodule",
     "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalStorageManager.swiftdeps",
     "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalStorageManager.dia"
+  },
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TransformationDetector.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TransformationDetector.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TransformationDetector.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TransformationDetector~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TransformationDetector.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TransformationDetector.dia"
   }
 }

@@ -52,6 +52,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TransformationDetector.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
         },
         {
@@ -80,7 +84,8 @@
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeBundleSpec.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeTemporal.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalBundleManager.swift.o",
-        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalStorageManager.swift.o"
+        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalStorageManager.swift.o",
+        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TransformationDetector.swift.o"
       ],
       "otherArguments" : [
         "-target",
@@ -165,6 +170,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TransformationDetector.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/Modules/MuseeBundle.swiftmodule"
         }
       ],
@@ -175,7 +184,8 @@
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/MuseeBundleSpec.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/MuseeTemporal.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalBundleManager.swift",
-        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalStorageManager.swift"
+        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalStorageManager.swift",
+        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TransformationDetector.swift"
       ],
       "tempsPath" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build",
       "wholeModuleOptimization" : false
@@ -1759,6 +1769,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/ScrapingOrchestrator.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaOrchestrator.swift"
         },
         {
@@ -1796,6 +1810,7 @@
       "objects" : [
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/AIWebScraper.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/MuseeScraper.swift.o",
+        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/ScrapingOrchestrator.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/SocialMediaOrchestrator.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/SocialMediaScraper.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/SocialMediaScrapers.swift.o",
@@ -1868,6 +1883,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/ScrapingOrchestrator.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/SocialMediaOrchestrator.swift.o"
         },
         {
@@ -1891,6 +1910,7 @@
       "sources" : [
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/AIWebScraper.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/MuseeScraper.swift",
+        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/ScrapingOrchestrator.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaOrchestrator.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaScraper.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaScrapers.swift",
@@ -2632,6 +2652,7 @@
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/MuseeTemporal.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalBundleManager.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalStorageManager.swift",
+      "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TransformationDetector.swift",
       "-I",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/Modules",
       "-target",
@@ -3576,6 +3597,7 @@
       "-c",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/AIWebScraper.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/MuseeScraper.swift",
+      "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/ScrapingOrchestrator.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaOrchestrator.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaScraper.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaScrapers.swift",
@@ -4268,6 +4290,10 @@
         {
           "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalStorageManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TransformationDetector.swift"
         }
       ],
       "outputFilePath" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/sources"
@@ -4449,6 +4475,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TransformationDetector.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeCAS.build/ContentAddressedStore.swift.o"
         },
         {
@@ -4558,6 +4588,10 @@
         {
           "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/MuseeScraper.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/ScrapingOrchestrator.swift.o"
         },
         {
           "kind" : "file",
@@ -4705,6 +4739,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TransformationDetector.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeCAS.build/ContentAddressedStore.swift.o"
         },
         {
@@ -4790,6 +4828,10 @@
         {
           "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/MuseeScraper.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/ScrapingOrchestrator.swift.o"
         },
         {
           "kind" : "file",
@@ -4949,6 +4991,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TransformationDetector.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeCAS.build/ContentAddressedStore.swift.o"
         },
         {
@@ -5034,6 +5080,10 @@
         {
           "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/MuseeScraper.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/ScrapingOrchestrator.swift.o"
         },
         {
           "kind" : "file",
@@ -5166,6 +5216,10 @@
         {
           "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/MuseeScraper.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/ScrapingOrchestrator.swift"
         },
         {
           "kind" : "file",
@@ -5353,6 +5407,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TransformationDetector.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeCAS.build/ContentAddressedStore.swift.o"
         },
         {
@@ -5426,6 +5484,10 @@
         {
           "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/MuseeScraper.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/ScrapingOrchestrator.swift.o"
         },
         {
           "kind" : "file",
@@ -5545,6 +5607,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TransformationDetector.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeCAS.build/ContentAddressedStore.swift.o"
         },
         {
@@ -5618,6 +5684,10 @@
         {
           "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/MuseeScraper.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeScraper.build/ScrapingOrchestrator.swift.o"
         },
         {
           "kind" : "file",

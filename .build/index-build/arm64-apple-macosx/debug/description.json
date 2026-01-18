@@ -1693,6 +1693,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/ScrapingOrchestrator.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaOrchestrator.swift"
         },
         {
@@ -1730,6 +1734,7 @@
       "objects" : [
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeScraper.build/AIWebScraper.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeScraper.build/MuseeScraper.swift.o",
+        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeScraper.build/ScrapingOrchestrator.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeScraper.build/SocialMediaOrchestrator.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeScraper.build/SocialMediaScraper.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeScraper.build/SocialMediaScrapers.swift.o",
@@ -1807,6 +1812,7 @@
       "sources" : [
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/AIWebScraper.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/MuseeScraper.swift",
+        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/ScrapingOrchestrator.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaOrchestrator.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaScraper.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaScrapers.swift",
@@ -3553,6 +3559,7 @@
       "-c",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/AIWebScraper.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/MuseeScraper.swift",
+      "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/ScrapingOrchestrator.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaOrchestrator.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaScraper.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/SocialMediaScrapers.swift",
@@ -4561,6 +4568,10 @@
         {
           "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/MuseeScraper.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeScraper/ScrapingOrchestrator.swift"
         },
         {
           "kind" : "file",
