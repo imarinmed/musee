@@ -377,10 +377,6 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformImagePicker.swift"
-        },
-        {
-          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformVisualEffect.swift"
         },
         {
@@ -404,7 +400,6 @@
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/MuseeError.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PartialDate.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PlatformImage.swift.o",
-        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PlatformImagePicker.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PlatformVisualEffect.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/StableID.swift.o"
       ],
@@ -482,7 +477,6 @@
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/MuseeError.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PartialDate.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformImage.swift",
-        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformImagePicker.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformVisualEffect.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/StableID.swift"
       ],
@@ -2563,7 +2557,6 @@
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/MuseeError.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PartialDate.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformImage.swift",
-      "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformImagePicker.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformVisualEffect.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/StableID.swift",
       "-I",
@@ -4046,10 +4039,6 @@
         {
           "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformImage.swift"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformImagePicker.swift"
         },
         {
           "kind" : "file",

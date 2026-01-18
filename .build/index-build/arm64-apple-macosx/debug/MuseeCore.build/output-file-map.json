@@ -30,13 +30,6 @@
     "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PlatformImage.swiftdeps",
     "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PlatformImage.dia"
   },
-  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformImagePicker.swift": {
-    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PlatformImagePicker.d",
-    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PlatformImagePicker.swift.o",
-    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PlatformImagePicker~partial.swiftmodule",
-    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PlatformImagePicker.swiftdeps",
-    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PlatformImagePicker.dia"
-  },
   "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeCore/PlatformVisualEffect.swift": {
     "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PlatformVisualEffect.d",
     "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeCore.build/PlatformVisualEffect.swift.o",
