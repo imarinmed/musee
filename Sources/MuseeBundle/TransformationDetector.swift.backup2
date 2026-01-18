@@ -22,19 +22,11 @@ public class TransformationDetector {
         public let confidence: Double  // 0.0 to 1.0
         public let description: String
         public let evidence: [String]
-        public let timeRange: ClosedRange<Date>
+        public let timeRange: (start: Date, end: Date)
         public let beforeSnapshot: MuseeTemporal.MuseSnapshot?
         public let afterSnapshot: MuseeTemporal.MuseSnapshot?
         
-        public init(
-            type: TransformationType,
-            confidence: Double,
-            description: String,
-            evidence: [String],
-            timeRange: ClosedRange<Date>,
-            beforeSnapshot: MuseeTemporal.MuseSnapshot?,
-            afterSnapshot: MuseeTemporal.MuseSnapshot?
-        ) {
+        public init(type: TransformationType, confidence: Double, description: String, evidence: [String], timeRange: ClosedRange<Date], beforeSnapshot: MuseeTemporal.MuseSnapshot?, afterSnapshot: MuseeTemporal.MuseSnapshot?) {
             self.type = type
             self.confidence = confidence
             self.description = description
@@ -74,7 +66,7 @@ public class TransformationDetector {
         // Look for multi-snapshot patterns (gradual changes)
         transformations.append(contentsOf: await detectGradualChanges(in: snapshots))
         
-        return transformations.sorted { $0.timeRange.lowerBound < $1.timeRange.lowerBound }
+        return transformations.sorted { $0.timeRange.0 < $1.timeRange.0 }
     }
     
     private func analyzeTransformation(from before: MuseeTemporal.MuseSnapshot, to after: MuseeTemporal.MuseSnapshot) async -> DetectedTransformation? {

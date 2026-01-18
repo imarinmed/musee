@@ -18,10 +18,10 @@ let package = Package(
         .library(name: "MuseeSearch", targets: ["MuseeSearch"]),
         .library(name: "MuseeVision", targets: ["MuseeVision"]),
         .library(name: "MuseeScraper", targets: ["MuseeScraper"]),
-
-        // Public facade and UI
-        .library(name: "MuseeKit", targets: ["MuseeKit"]),
         .library(name: "MuseeUI", targets: ["MuseeUI"]),
+
+        // Public facade
+        .library(name: "MuseeKit", targets: ["MuseeKit"]),
 
         // Platform abstraction layer
         .library(name: "MuseePlatform", targets: ["MuseePlatform"]),
@@ -93,7 +93,7 @@ let package = Package(
             name: "MuseeScraper",
             dependencies: [
                 "MuseeCore",
-                "MuseeDomain",
+                "MuseeDomain"
             ]
         ),
         // New facade library

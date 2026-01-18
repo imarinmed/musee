@@ -146,13 +146,10 @@ public class ImageFeatureExtractor {
         case .failure(let error): throw error
         }
 
-        // Run parallel analysis
-        async let heightEstimation = estimateHeight(from: ciImage)
-        async let colorAnalysis = analyzeColors(from: ciImage)
-        async let symmetryAnalysis = analyzeSymmetry(from: ciImage)
-
-        // Wait for all analyses to complete
-        let (height, colors, symmetry) = try await (heightEstimation, colorAnalysis, symmetryAnalysis)
+        // Run sequential analysis to avoid concurrency issues
+        let height = await estimateHeight(from: ciImage)
+        let colors = await analyzeColors(from: ciImage)
+        let symmetry = await analyzeSymmetry(from: ciImage)
         
         // Extract measurements from vision features
         let bodyMeasurements = extractBodyMeasurements(from: features)
@@ -249,7 +246,7 @@ public class ImageFeatureExtractor {
         // Extract facial measurements from landmarks
         let leftEye = landmarks["left_eye"] ?? CGPoint(x: 0, y: 0)
         let rightEye = landmarks["right_eye"] ?? CGPoint(x: 0, y: 0)
-        let nose = landmarks["nose"] ?? CGPoint(x: 0, y: 0)
+        _ = landmarks["nose"] ?? CGPoint(x: 0, y: 0)
         let leftMouth = landmarks["left_mouth"] ?? CGPoint(x: 0, y: 0)
         let rightMouth = landmarks["right_mouth"] ?? CGPoint(x: 0, y: 0)
         

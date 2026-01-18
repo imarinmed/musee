@@ -5,6 +5,45 @@ import MuseeVision
 import MuseeScraper
 import MuseeBundle
 
+/// Advanced trend analysis result
+public struct TrendAnalysisResult: Sendable {
+    public let direction: TrendDirection
+    public let slope: Double  // Rate of change per time period
+    public let volatility: Double  // Standard deviation of scores
+    public let consistencyScore: Double  // 0.0 to 1.0, higher = more consistent
+    public let movingAverage: [Double]  // Smoothed trend line
+    public let predictions: [Prediction]  // Future score predictions
+    public let anomalies: [Anomaly]  // Detected unusual score changes
+    public let confidence: Double  // Overall confidence in analysis
+
+    public enum TrendDirection: Sendable {
+        case improving
+        case declining
+        case stable
+    }
+}
+
+/// Prediction for future EROSS score
+public struct Prediction: Sendable {
+    public let timestamp: Date
+    public let value: Double  // Predicted score (0.0 to 1.0)
+    public let confidence: Double  // Prediction confidence (0.0 to 1.0)
+}
+
+/// Detected anomaly in score history
+public struct Anomaly: Sendable {
+    public let timestamp: Date
+    public let value: Double  // Actual score value
+    public let expectedValue: Double  // Expected score based on trend
+    public let deviation: Double  // Magnitude of deviation
+    public let type: AnomalyType
+
+    public enum AnomalyType: Sendable {
+        case peak  // Score significantly higher than expected
+        case valley  // Score significantly lower than expected
+    }
+}
+
 /// Comprehensive EROSS composite scoring engine
 public class CompositeScoringEngine {
     
@@ -270,23 +309,86 @@ public class CompositeScoringEngine {
         return (followerScore * 0.6 + postScore * 0.4)
     }
     
-    private func calculateConsistencyScore(_ historical: [MuseeTemporal.EROSSHistory.ScoreEntry]) -> Double {
-        guard historical.count >= 2 else { return 0.5 }
 
-        // Calculate score stability over time
-        let scores = historical.map { $0.score }
-        let count = Double(scores.count)
-        let mean = scores.reduce(0, +) / count
-        let squaredDiffs = scores.map { ($0 - mean) * ($0 - mean) }
-        let variance = squaredDiffs.reduce(0, +) / count
-        let stdDev = sqrt(variance)
 
-        // Lower standard deviation = higher consistency
-        let consistency = max(0.0, 1.0 - (stdDev / 20.0))
 
-        return consistency
+
+    private func calculateLinearRegression(_ scores: [MuseeTemporal.EROSSHistory.ScoreEntry]) -> (slope: Double, intercept: Double) {
+        let n = Double(scores.count)
+        let xValues = (0..<scores.count).map { Double($0) }
+        let yValues = scores.map { $0.score }
+
+        let sumX = xValues.reduce(0, +)
+        let sumY = yValues.reduce(0, +)
+        let sumXY = zip(xValues, yValues).map(*).reduce(0, +)
+        let sumXX = xValues.map { $0 * $0 }.reduce(0, +)
+
+        let slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX)
+        let intercept = (sumY - slope * sumX) / n
+
+        return (slope, intercept)
     }
-    
+
+    private func calculateMovingAverage(_ values: [Double], window: Int) -> [Double] {
+        guard window > 0 && values.count >= window else { return [] }
+
+        var averages: [Double] = []
+        for i in 0...(values.count - window) {
+            let slice = values[i..<(i + window)]
+            let average = slice.reduce(0, +) / Double(window)
+            averages.append(average)
+        }
+        return averages
+    }
+
+    private func detectAnomalies(_ scores: [MuseeTemporal.EROSSHistory.ScoreEntry], mean: Double, stdDev: Double) -> [Anomaly] {
+        let threshold = 2.0 * stdDev // 2 standard deviations
+        var anomalies: [Anomaly] = []
+
+        for score in scores {
+            let deviation = abs(score.score - mean)
+            if deviation > threshold {
+                let type: Anomaly.AnomalyType = score.score > mean ? .peak : .valley
+                anomalies.append(Anomaly(
+                    timestamp: score.timestamp,
+                    value: score.score,
+                    expectedValue: mean,
+                    deviation: deviation,
+                    type: type
+                ))
+            }
+        }
+
+        return anomalies
+    }
+
+    private func generatePredictions(_ scores: [MuseeTemporal.EROSSHistory.ScoreEntry], slope: Double, intercept: Double) -> [Prediction] {
+        guard scores.count >= 3 else { return [] }
+
+        var predictions: [Prediction] = []
+        let lastTimestamp = scores.last!.timestamp
+
+        // Generate predictions for next 3 time periods
+        for periodsAhead in 1...3 {
+            let x = Double(scores.count + periodsAhead - 1)
+            let predictedValue = slope * x + intercept
+            let clampedValue = max(0.0, min(1.0, predictedValue)) // Clamp to valid range
+
+            // Estimate confidence decreasing with distance
+            let confidence = max(0.1, 1.0 - Double(periodsAhead) * 0.2)
+
+            let predictionDate = lastTimestamp.addingTimeInterval(Double(periodsAhead) * 30 * 24 * 60 * 60) // ~30 days per period
+
+            predictions.append(Prediction(
+                timestamp: predictionDate,
+                value: clampedValue,
+                confidence: confidence
+            ))
+        }
+
+        return predictions
+    }
+
     private func calculateUniquenessScore(_ beauty: BeautyFeatures?, _ social: MuseeScraper.SocialMediaData?) -> Double {
         // Simplified uniqueness calculation
         // In a real implementation, this would compare against a database of known muses
@@ -305,6 +407,23 @@ public class CompositeScoringEngine {
         }
 
         return min(1.0, uniqueness)
+    }
+
+    private func calculateConsistencyScore(_ historical: [MuseeTemporal.EROSSHistory.ScoreEntry]) -> Double {
+        guard historical.count >= 2 else { return 0.5 }
+
+        // Calculate score stability over time
+        let scores = historical.map { $0.score }
+        let count = Double(scores.count)
+        let mean = scores.reduce(0, +) / count
+        let squaredDiffs = scores.map { ($0 - mean) * ($0 - mean) }
+        let variance = squaredDiffs.reduce(0, +) / count
+        let stdDev = sqrt(variance)
+
+        // Lower standard deviation = higher consistency
+        let consistency = max(0.0, 1.0 - (stdDev / 20.0))
+
+        return consistency
     }
 }
 

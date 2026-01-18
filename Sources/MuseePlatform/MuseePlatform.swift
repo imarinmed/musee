@@ -17,8 +17,8 @@ public protocol ImagePicker {
 
 /// Protocol for file operations
 public protocol PlatformFileManager {
-    func saveFile(data: Data, filename: String, completion: @escaping (URL?) -> Void)
-    func loadFile(url: URL, completion: @escaping (Data?) -> Void)
+    @MainActor func saveFile(data: Data, filename: String, completion: @escaping (URL?) -> Void)
+    @MainActor func loadFile(url: URL, completion: @escaping (Data?) -> Void)
 }
 
 /// Protocol for sharing content
@@ -129,7 +129,7 @@ public struct PlatformImagePicker {
         #endif
     }
 
-    public func pickImage(completion: @escaping (Data?) -> Void) {
+    @MainActor public func pickImage(completion: @escaping (Data?) -> Void) {
         implementation.pickImage(completion: completion)
     }
 }
@@ -137,7 +137,7 @@ public struct PlatformImagePicker {
 #if canImport(AppKit)
 public struct MacOSFileManager: PlatformFileManager {
     public init() {}
-    public func saveFile(data: Data, filename: String, completion: @escaping (URL?) -> Void) {
+    @MainActor public func saveFile(data: Data, filename: String, completion: @escaping (URL?) -> Void) {
         let panel = NSSavePanel()
         panel.allowedContentTypes = [UTType.image]
         panel.nameFieldStringValue = filename
@@ -154,7 +154,7 @@ public struct MacOSFileManager: PlatformFileManager {
             }
         }
     }
-    public func loadFile(url: URL, completion: @escaping (Data?) -> Void) {
+    @MainActor public func loadFile(url: URL, completion: @escaping (Data?) -> Void) {
         do {
             let data = try Data(contentsOf: url)
             completion(data)
@@ -225,7 +225,7 @@ public struct iOSFileManager: PlatformFileManager {
             completion(nil)
         }
     }
-    public func loadFile(url: URL, completion: @escaping (Data?) -> Void) {
+    @MainActor public func loadFile(url: URL, completion: @escaping (Data?) -> Void) {
         do {
             let data = try Data(contentsOf: url)
             completion(data)

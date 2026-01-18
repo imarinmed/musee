@@ -97,8 +97,8 @@ public class SourceNormalizer {
         sourceReliability: [String: Double] = [:]
     ) async -> NormalizationResult {
 
-        var warnings: [NormalizationWarning] = []
-        var conflicts: [DataConflict] = []
+        let warnings: [NormalizationWarning] = []
+        let conflicts: [DataConflict] = []
 
         // Create base person from scraped data
         let person = createPerson(from: scrapedData)
@@ -169,7 +169,7 @@ public class SourceNormalizer {
         
         // Extract aliases from metadata if available
         let aliases: Set<String> = {
-            if let aliasesStr = scrapedData.metadata["aliases"] as? String {
+            if let aliasesStr = scrapedData.metadata["aliases"] {
                 return Set(aliasesStr.split(separator: ",").map { String($0).trimmingCharacters(in: .whitespaces) })
             }
             return []
@@ -195,18 +195,90 @@ public class SourceNormalizer {
     private func claimsFromScrapedData(_ data: MuseeScraper.MuseData) -> [BiographicalClaim] {
         var claims = [BiographicalClaim]()
         let subjectId = stableIDGenerator()
-        
-        // Name claim
-        claims.append(BiographicalClaim(
-            id: stableIDGenerator(),
-            subject: subjectId,
-            property: .note,
-            value: .string("Name: \(data.name)"),
-            confidence: .high,
-            references: []
-        ))
-        
-        // Bio claim
+
+        // Parse structured data from metadata
+        let measurements = parseMeasurements(from: data.metadata)
+
+        // Physical measurements
+        if let height = measurements["height"] {
+            claims.append(BiographicalClaim(
+                id: stableIDGenerator(),
+                subject: subjectId,
+                property: .height,
+                value: .number(height),
+                confidence: .high,
+                references: []
+            ))
+        }
+
+        if let weight = measurements["weight"] {
+            claims.append(BiographicalClaim(
+                id: stableIDGenerator(),
+                subject: subjectId,
+                property: .weight,
+                value: .number(weight),
+                confidence: .high,
+                references: []
+            ))
+        }
+
+        if let bust = measurements["bust"] {
+            claims.append(BiographicalClaim(
+                id: stableIDGenerator(),
+                subject: subjectId,
+                property: .bust,
+                value: .number(bust),
+                confidence: .high,
+                references: []
+            ))
+        }
+
+        if let waist = measurements["waist"] {
+            claims.append(BiographicalClaim(
+                id: stableIDGenerator(),
+                subject: subjectId,
+                property: .waist,
+                value: .number(waist),
+                confidence: .high,
+                references: []
+            ))
+        }
+
+        if let hips = measurements["hips"] {
+            claims.append(BiographicalClaim(
+                id: stableIDGenerator(),
+                subject: subjectId,
+                property: .hips,
+                value: .number(hips),
+                confidence: .high,
+                references: []
+            ))
+        }
+
+        // Hair information
+        if let hairColor = data.metadata["hair_color"] {
+            claims.append(BiographicalClaim(
+                id: stableIDGenerator(),
+                subject: subjectId,
+                property: .hairColor,
+                value: .string(hairColor),
+                confidence: .medium,
+                references: []
+            ))
+        }
+
+        if let hairStyle = data.metadata["hair_style"] {
+            claims.append(BiographicalClaim(
+                id: stableIDGenerator(),
+                subject: subjectId,
+                property: .hairStyle,
+                value: .string(hairStyle),
+                confidence: .medium,
+                references: []
+            ))
+        }
+
+        // Bio as note
         if let bio = data.bio {
             claims.append(BiographicalClaim(
                 id: stableIDGenerator(),
@@ -217,8 +289,8 @@ public class SourceNormalizer {
                 references: []
             ))
         }
-        
-        // Social media accounts (basic info)
+
+        // Social media accounts
         for account in data.socialAccounts {
             claims.append(BiographicalClaim(
                 id: stableIDGenerator(),
@@ -229,8 +301,33 @@ public class SourceNormalizer {
                 references: []
             ))
         }
-        
+
         return claims
+    }
+
+    private func parseMeasurements(from metadata: [String: String]) -> [String: Double] {
+        var measurements = [String: Double]()
+
+        // Parse common measurement formats like "34-24-36" or individual values
+        if let measurementsStr = metadata["measurements"] {
+            let parts = measurementsStr.split(separator: "-").map { $0.trimmingCharacters(in: .whitespaces) }
+            if parts.count >= 3 {
+                if let bust = Double(parts[0]) { measurements["bust"] = bust }
+                if let waist = Double(parts[1]) { measurements["waist"] = waist }
+                if let hips = Double(parts[2]) { measurements["hips"] = hips }
+            }
+        }
+
+        // Individual measurements
+        if let heightStr = metadata["height"], let height = Double(heightStr.replacingOccurrences(of: "[^0-9.]", with: "", options: .regularExpression)) {
+            measurements["height"] = height
+        }
+
+        if let weightStr = metadata["weight"], let weight = Double(weightStr.replacingOccurrences(of: "[^0-9.]", with: "", options: .regularExpression)) {
+            measurements["weight"] = weight
+        }
+
+        return measurements
     }
     
     private func claimsFromSocialData(_ data: MuseeScraper.SocialMediaData, sourceIndex: Int) -> ([BiographicalClaim], [MediaAsset]) {
@@ -249,7 +346,7 @@ public class SourceNormalizer {
                 references: []
             ))
         }
-        
+
         if let bio = data.bio {
             claims.append(BiographicalClaim(
                 id: stableIDGenerator(),
@@ -282,8 +379,63 @@ public class SourceNormalizer {
 
     
     private func resolveClaimConflicts(_ claims: [BiographicalClaim]) -> [BiographicalClaim] {
-        // Simplified: just return all claims (no conflict resolution for now)
-        return claims
+        var resolvedClaims = [BiographicalClaim]()
+        var conflicts = [DataConflict]()
+
+        // Group claims by property
+        let claimsByProperty = Dictionary(grouping: claims) { $0.property }
+
+        for (property, propertyClaims) in claimsByProperty {
+            if propertyClaims.count == 1 {
+                // No conflict, keep the claim
+                resolvedClaims.append(propertyClaims[0])
+            } else {
+                // Multiple claims for same property - resolve conflict
+                let resolved = resolvePropertyConflict(propertyClaims, for: property)
+                resolvedClaims.append(resolved.claim)
+
+                if let conflict = resolved.conflict {
+                    conflicts.append(conflict)
+                }
+            }
+        }
+
+        // Store conflicts for reporting (would be added to NormalizationResult)
+        // For now, just resolve them
+        return resolvedClaims
+    }
+
+    private func resolvePropertyConflict(_ claims: [BiographicalClaim], for property: ClaimProperty) -> (claim: BiographicalClaim, conflict: DataConflict?) {
+        // Sort by confidence, highest first
+        let sortedClaims = claims.sorted { confidenceToDouble($0.confidence) > confidenceToDouble($1.confidence) }
+
+        // Strategy: Keep highest confidence claim
+        let winner = sortedClaims[0]
+
+        // Create conflict record if there were actual value differences
+        let values = claims.map { valueToString($0.value) }
+        let uniqueValues = Set(values)
+
+        if uniqueValues.count > 1 {
+            let conflict = DataConflict(
+                field: property.rawValue,
+                conflictingValues: Array(uniqueValues),
+                sources: claims.map { "source_\($0.id)" }, // Simplified
+                resolution: .keepHighestConfidence
+            )
+            return (winner, conflict)
+        }
+
+        return (winner, nil)
+    }
+
+    private func valueToString(_ value: ClaimValue) -> String {
+        switch value {
+        case .string(let str): return str
+        case .number(let num): return String(num)
+        case .person(let id): return id.rawValue
+        case .media(let id): return id.rawValue
+        }
     }
     
     private func calculateOverallConfidence(

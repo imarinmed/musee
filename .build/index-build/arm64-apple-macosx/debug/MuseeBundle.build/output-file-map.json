@@ -9,6 +9,13 @@
     "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/ChangeDetectionEngine.swiftdeps",
     "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/ChangeDetectionEngine.dia"
   },
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/EROSSVersioningManager.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/EROSSVersioningManager.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/EROSSVersioningManager.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/EROSSVersioningManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/EROSSVersioningManager.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/EROSSVersioningManager.dia"
+  },
   "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/MuseeBundle.swift": {
     "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeBundle.d",
     "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeBundle.swift.o",

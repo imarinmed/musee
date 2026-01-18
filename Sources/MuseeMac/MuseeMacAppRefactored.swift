@@ -317,7 +317,7 @@ struct AnalysisResultsView: View {
 
                     ScoreRow(label: "Facial Beauty", score: result.facialRatios.overallScore)
                     ScoreRow(label: "Body Aesthetics", score: result.bodyRatios.overallScore)
-                    ScoreRow(label: "Skin Quality", score: result.skinQuality)
+                    ScoreRow(label: "Skin Quality", score: result.skinAnalysis.overallQuality)
                 }
                 .glassCard()
                 .padding(.horizontal)
@@ -377,7 +377,7 @@ struct BeautyAnalysisStudioView: View {
                 }
 
                 if let image = selectedImage {
-                    Image(platformImage: image)
+                    Image(nsImage: image)
                         .resizable()
                         .scaledToFit()
                         .frame(height: 300)
@@ -414,15 +414,14 @@ struct BeautyAnalysisStudioView: View {
             .glassBackground()
         }
         .sheet(isPresented: $showImagePicker) {
-            ImagePickerView(
-                configuration: .init(allowedTypes: ["png", "jpg", "jpeg", "heic"])
-            ) { image, url in
-                selectedImage = image
-                selectedImageURL = url
-                analyzeImage(at: url)
-            } onCancelled: {
-                showImagePicker = false
+            VStack {
+                Text("Image Picker - Coming Soon")
+                Button("Cancel") {
+                    showImagePicker = false
+                }
             }
+            .padding()
+            // TODO: Implement proper ImagePickerView
         }
     }
 
@@ -434,7 +433,8 @@ struct BeautyAnalysisStudioView: View {
             do {
                 // Convert to Data for analysis
                 let imageData = try Data(contentsOf: url)
-                let features = try await VisionProcessor.extractFeatures(from: imageData)
+                let featuresResult = try await VisionProcessor.extractFeatures(from: imageData)
+                let features = try featuresResult.get() // Unwrap the Result
                 let beautyFeatures = VisionProcessor.analyzeBeauty(from: features)
 
                 await MainActor.run {

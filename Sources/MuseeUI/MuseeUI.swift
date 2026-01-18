@@ -37,7 +37,7 @@ public struct MuseumCard<Content: View>: View {
     public var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 12)
-                .fill(Color(.systemBackground))
+                .fill(Color.secondary.opacity(0.1))
                 .shadow(radius: 2)
 
             content
@@ -100,7 +100,7 @@ public struct MuseumSearchBar: View {
             }
         }
         .padding(8)
-        .background(Color(.systemGray6))
+        .background(Color.secondary.opacity(0.2))
         .cornerRadius(8)
     }
 }
