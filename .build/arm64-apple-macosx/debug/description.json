@@ -44,6 +44,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/SnapshotComparator.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalBundleManager.swift"
         },
         {
@@ -83,6 +87,7 @@
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeBundle.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeBundleSpec.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeTemporal.swift.o",
+        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/SnapshotComparator.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalBundleManager.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalStorageManager.swift.o",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TransformationDetector.swift.o"
@@ -162,6 +167,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/SnapshotComparator.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalBundleManager.swift.o"
         },
         {
@@ -183,6 +192,7 @@
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/MuseeBundle.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/MuseeBundleSpec.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/MuseeTemporal.swift",
+        "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/SnapshotComparator.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalBundleManager.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalStorageManager.swift",
         "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TransformationDetector.swift"
@@ -2650,6 +2660,7 @@
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/MuseeBundle.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/MuseeBundleSpec.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/MuseeTemporal.swift",
+      "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/SnapshotComparator.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalBundleManager.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalStorageManager.swift",
       "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TransformationDetector.swift",
@@ -4285,6 +4296,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/SnapshotComparator.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalBundleManager.swift"
         },
         {
@@ -4464,6 +4479,10 @@
         {
           "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeTemporal.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/SnapshotComparator.swift.o"
         },
         {
           "kind" : "file",
@@ -4731,6 +4750,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/SnapshotComparator.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalBundleManager.swift.o"
         },
         {
@@ -4980,6 +5003,10 @@
         {
           "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeTemporal.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/SnapshotComparator.swift.o"
         },
         {
           "kind" : "file",
@@ -5399,6 +5426,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/SnapshotComparator.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalBundleManager.swift.o"
         },
         {
@@ -5596,6 +5627,10 @@
         {
           "kind" : "file",
           "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeTemporal.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/SnapshotComparator.swift.o"
         },
         {
           "kind" : "file",

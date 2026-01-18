@@ -30,6 +30,13 @@
     "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeTemporal.swiftdeps",
     "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeTemporal.dia"
   },
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/SnapshotComparator.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/SnapshotComparator.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/SnapshotComparator.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/SnapshotComparator~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/SnapshotComparator.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/SnapshotComparator.dia"
+  },
   "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalBundleManager.swift": {
     "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalBundleManager.d",
     "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/index-build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalBundleManager.swift.o",

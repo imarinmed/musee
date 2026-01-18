@@ -66,7 +66,7 @@ public class TransformationDetector {
         // Look for multi-snapshot patterns (gradual changes)
         transformations.append(contentsOf: await detectGradualChanges(in: snapshots))
         
-        return transformations.sorted { $0.timeRange.lowerBound < $1.timeRange.lowerBound }
+        return transformations.sorted { $0.timeRange.0 < $1.timeRange.0 }
     }
     
     private func analyzeTransformation(from before: MuseeTemporal.MuseSnapshot, to after: MuseeTemporal.MuseSnapshot) async -> DetectedTransformation? {
