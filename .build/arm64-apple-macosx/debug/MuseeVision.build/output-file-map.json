@@ -9,12 +9,26 @@
     "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/BodyMeasurementEstimator.swiftdeps",
     "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/BodyMeasurementEstimator.dia"
   },
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeVision/CompositeScoringEngine.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/CompositeScoringEngine.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/CompositeScoringEngine.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/CompositeScoringEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/CompositeScoringEngine.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/CompositeScoringEngine.dia"
+  },
   "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeVision/EROSSCalculator.swift": {
     "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/EROSSCalculator.d",
     "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/EROSSCalculator.swift.o",
     "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/EROSSCalculator~partial.swiftmodule",
     "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/EROSSCalculator.swiftdeps",
     "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/EROSSCalculator.dia"
+  },
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeVision/ImageFeatureExtractor.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/ImageFeatureExtractor.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/ImageFeatureExtractor.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/ImageFeatureExtractor~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/ImageFeatureExtractor.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/ImageFeatureExtractor.dia"
   },
   "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeVision/VisionProcessor.swift": {
     "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeVision.build/VisionProcessor.d",

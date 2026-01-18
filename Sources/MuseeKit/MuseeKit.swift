@@ -32,6 +32,9 @@
 // MARK: - Search & Discovery
 @_exported import MuseeSearch
 
+// MARK: - Data Acquisition
+@_exported import MuseeScraper
+
 /// The main MuseeKit facade providing high-level APIs for museum applications.
 ///
 /// This is the primary entry point for building museum experiences.

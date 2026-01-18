@@ -2,6 +2,13 @@
   "": {
     "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/master.swiftdeps"
   },
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/ChangeDetectionEngine.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/ChangeDetectionEngine.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/ChangeDetectionEngine.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/ChangeDetectionEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/ChangeDetectionEngine.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/ChangeDetectionEngine.dia"
+  },
   "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/MuseeBundle.swift": {
     "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeBundle.d",
     "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeBundle.swift.o",
@@ -15,5 +22,26 @@
     "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeBundleSpec~partial.swiftmodule",
     "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeBundleSpec.swiftdeps",
     "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeBundleSpec.dia"
+  },
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/MuseeTemporal.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeTemporal.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeTemporal.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeTemporal~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeTemporal.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/MuseeTemporal.dia"
+  },
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalBundleManager.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalBundleManager.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalBundleManager.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalBundleManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalBundleManager.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalBundleManager.dia"
+  },
+  "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/Sources/MuseeBundle/TemporalStorageManager.swift": {
+    "dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalStorageManager.d",
+    "object": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalStorageManager.swift.o",
+    "swiftmodule": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalStorageManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalStorageManager.swiftdeps",
+    "diagnostics": "/Users/wolfy/Developer/2026.Y/Musee Environment/museekit/.build/arm64-apple-macosx/debug/MuseeBundle.build/TemporalStorageManager.dia"
   }
 }

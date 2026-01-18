@@ -32,13 +32,19 @@ public struct MuseeManifest: Codable, Sendable {
     public let assets: [MediaAsset]
     public let claims: [BiographicalClaim]
     public let relationships: [RelationshipEdge]
-
-    public init(bundle: BundleInfo, person: Person, tags: [Tag], assets: [MediaAsset], claims: [BiographicalClaim], relationships: [RelationshipEdge]) {
+    
+    // Temporal data (optional, for backward compatibility)
+    public let evolutionTimeline: MuseeTemporal.EvolutionTimeline?
+    public let erossHistory: MuseeTemporal.EROSSHistory?
+    
+    public init(bundle: BundleInfo, person: Person, tags: [Tag], assets: [MediaAsset], claims: [BiographicalClaim], relationships: [RelationshipEdge], evolutionTimeline: MuseeTemporal.EvolutionTimeline? = nil, erossHistory: MuseeTemporal.EROSSHistory? = nil) {
         self.bundle = bundle
         self.person = person
         self.tags = tags
         self.assets = assets
         self.claims = claims
         self.relationships = relationships
+        self.evolutionTimeline = evolutionTimeline
+        self.erossHistory = erossHistory
     }
 }

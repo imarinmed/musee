@@ -17,6 +17,7 @@ let package = Package(
         .library(name: "MuseeMetadata", targets: ["MuseeMetadata"]),
         .library(name: "MuseeSearch", targets: ["MuseeSearch"]),
         .library(name: "MuseeVision", targets: ["MuseeVision"]),
+        .library(name: "MuseeScraper", targets: ["MuseeScraper"]),
 
         // Public facade and UI
         .library(name: "MuseeKit", targets: ["MuseeKit"]),
@@ -88,6 +89,13 @@ let package = Package(
                 "MuseeMetadata",
             ]
         ),
+        .target(
+            name: "MuseeScraper",
+            dependencies: [
+                "MuseeCore",
+                "MuseeDomain",
+            ]
+        ),
         // New facade library
         .target(
             name: "MuseeKit",
@@ -100,6 +108,7 @@ let package = Package(
                 "MuseeMetadata",
                 "MuseeSearch",
                 "MuseeVision",
+                "MuseeScraper",
             ]
         ),
 
